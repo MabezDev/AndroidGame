@@ -331,11 +331,11 @@ public class SwipeListener extends Entity implements IScrollDetectorListener,ICl
 	public void onClick(ClickDetector pClickDetector, int pPointerID,
 			float pSceneX, float pSceneY) {
 		Log.i("called",Integer.toString(iItemClicked));
-		if(iItemClicked >=1 && iItemClicked <=4){
+		if(iItemClicked >=1 && iItemClicked <=3){
 			this.m.createGameScene(iItemClicked);
-			this.m.LoadingScene = new LoadingScene(this.m,SceneManager.AllScenes.GAME,this.eng,this.act,1);
+			this.m.LoadingScene = new LoadingScene(this.m,SceneManager.AllScenes.GAME,this.eng,this.act,3);
 			this.m.setCurrentScene(SceneManager.AllScenes.LOAD);
-		} else if (iItemClicked==5){
+		} else if (iItemClicked==4){
 			System.exit(0);
 		}
 	

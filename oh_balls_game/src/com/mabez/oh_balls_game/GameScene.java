@@ -296,13 +296,13 @@ public class GameScene
         	paramAnonymousTimerHandler.reset();
       }
     });
-    this.MainHandlerLoop = new TimerHandler(0.5F, new ITimerCallback()
+    this.MainHandlerLoop = new TimerHandler(0.1F, new ITimerCallback()
     {
       public void onTimePassed(TimerHandler paramAnonymousTimerHandler)
       {
-        GameScene.this.checkSpriteCoordinate();
-        GameScene.this.Score = (GameScene.this.timeInSeconds * GameScene.this.scoreMultiplayer);
-        GameScene.this.updateScore(GameScene.this.Score);
+        checkSpriteCoordinate();
+        Score = (GameScene.this.timeInSeconds * GameScene.this.scoreMultiplayer);
+        updateScore(GameScene.this.Score);
         paramAnonymousTimerHandler.reset();
       }
     });
